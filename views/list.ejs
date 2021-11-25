@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>To do list</title>
+  </head>
+  <body>
+
+      <h1>Today is on <%= kindOfDay %> </h1>
+
+      <form class="" action="/" method="post">
+        <label for="newItem">What do you want to do today?</label><br>
+        <input type="text" name="newItem" >
+
+        <button type="Submit" name="button">Add</button>
+      </form>
+
+      <ul>
+      <%for(var i =0; i<newListItems.length;i++ ){%>
+            <li> <%=newListItems[i] %> </li>
+      <% }%>
+
+      </ul>
+  </body>
+</html>
