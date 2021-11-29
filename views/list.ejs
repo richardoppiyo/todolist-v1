@@ -1,15 +1,7 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>To do list</title>
-
-    <link rel="stylesheet" href="/css/styles.css">
-  </head>
-  <body>
+<%- include("header"); -%>
 
     <div class="box" id="heading">
-        <h1><%= kindOfDay %> </h1>
+        <h1><%= ListTitle %> </h1>
     </div>
 
   <div class="box">
@@ -23,14 +15,8 @@
         <form class="item" action="/" method="post">
           <!-- <label for="newItem">What do you want to do today?</label><br> -->
           <input type="text" name="newItem" placeholder="New Item" autocomplete="off" >
-          <button type="Submit" name="button">+</button>
+          <button type="Submit" name="list" value="<%= ListTitle %>">+</button>
         </form>
   </div>
 
-
-
-
-
-
-  </body>
-</html>
+<%- include("footer"); -%>
