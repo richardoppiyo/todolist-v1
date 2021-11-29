@@ -3,23 +3,34 @@
   <head>
     <meta charset="utf-8">
     <title>To do list</title>
+
+    <link rel="stylesheet" href="/css/styles.css">
   </head>
   <body>
 
-      <h1>Today is on <%= kindOfDay %> </h1>
+    <div class="box" id="heading">
+        <h1><%= kindOfDay %> </h1>
+    </div>
 
-      <form class="" action="/" method="post">
-        <label for="newItem">What do you want to do today?</label><br>
-        <input type="text" name="newItem" >
+  <div class="box">
+        <%for(var i =0; i<newListItems.length;i++ ){%>
+          <div class="item">
+            <input type="checkbox">
+              <p> <%=newListItems[i] %> </p>
+          </div>
+        <% }%>
 
-        <button type="Submit" name="button">Add</button>
-      </form>
+        <form class="item" action="/" method="post">
+          <!-- <label for="newItem">What do you want to do today?</label><br> -->
+          <input type="text" name="newItem" placeholder="New Item" autocomplete="off" >
+          <button type="Submit" name="button">+</button>
+        </form>
+  </div>
 
-      <ul>
-      <%for(var i =0; i<newListItems.length;i++ ){%>
-            <li> <%=newListItems[i] %> </li>
-      <% }%>
 
-      </ul>
+
+
+
+
   </body>
 </html>
